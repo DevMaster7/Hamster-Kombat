@@ -21,13 +21,8 @@ let rank_num = document.getElementById("rank_num")
 // }
 
 let c = 2000
-let eOrignal = 1000
-let e = eOrignal
-// let e = 1000
+let e = 1000
 let f = "+1"
-
-let increasedEnergy = false; // Flag to track if e has been increased by 500
-
 btn.addEventListener("click", function () {
     barrr()
     if (e > 0) {
@@ -35,7 +30,7 @@ btn.addEventListener("click", function () {
     }
 })
 function level(event) {
-    // let previousLevel = rank_num.innerHTML;
+    let previousLevel = rank_num.innerHTML;
     if (c >= 2000 && c < 2099) {
         if (e >= 1) {
             bronze()
@@ -53,12 +48,12 @@ function level(event) {
     }
     else if (c >= 2099 && c < 2199) {
         if (e >= 2) {
-            // if (previousLevel !== "2") e += 500;
-            // energy.innerHTML = e
             silver()
             f = "+2"
             click.src = "assets/levels/2.jpg"
             num_click(f, event);
+            if (previousLevel !== "2") e = 1500;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 2) {
@@ -75,6 +70,8 @@ function level(event) {
             f = "+3"
             click.src = "assets/levels/3.jpg"
             num_click(f, event);
+            if (previousLevel !== "3") e = 2000;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 3) {
@@ -91,7 +88,8 @@ function level(event) {
             f = "+4"
             click.src = "assets/levels/4.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "4") e = 2500;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 4) {
@@ -108,7 +106,8 @@ function level(event) {
             f = "+5"
             click.src = "assets/levels/5.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "5") e = 3000;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 5) {
@@ -125,7 +124,8 @@ function level(event) {
             f = "+6"
             click.src = "assets/levels/6.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "6") e = 3500;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 6) {
@@ -142,7 +142,8 @@ function level(event) {
             f = "+7"
             click.src = "assets/levels/7.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "7") e = 4000;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 7) {
@@ -159,7 +160,8 @@ function level(event) {
             f = "+8"
             click.src = "assets/levels/8.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "8") e = 4500;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 18) {
@@ -176,7 +178,8 @@ function level(event) {
             f = "+9"
             click.src = "assets/levels/9.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "9") e = 5000;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 9) {
@@ -193,7 +196,8 @@ function level(event) {
             f = "+10"
             click.src = "assets/levels/10.jpg"
             num_click(f, event);
-
+            if (previousLevel !== "10") e = 5500;
+            energy.innerHTML = e;
         }
         // setInterval(() => {
         //     if (e < 10) {
@@ -206,7 +210,6 @@ function level(event) {
     }
     else { }
 }
-
 
 function bronze() {
     c += 1
@@ -222,7 +225,6 @@ function silver() {
         energy.innerHTML = e
         rank_name.innerHTML = "Silver"
         rank_num.innerHTML = "2"
-
     }
 }
 function gold() {
@@ -375,8 +377,6 @@ function restore() {
     if (e < 1000) {
         e += 1
     }
-
-
 }
 setInterval(() => {
     restore()
