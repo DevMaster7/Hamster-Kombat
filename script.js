@@ -6,19 +6,31 @@ let bar = document.getElementById("arr")
 let click = document.getElementById("clck")
 let rank_name = document.getElementById("rank_name")
 let rank_num = document.getElementById("rank_num")
+let energy2 = document.getElementById("energies")
+let bolt = document.getElementById("energy_pic")
+let loading_screen = document.getElementById("loading_screen")
+let main_screen = document.getElementById("main_screen")
 
-// // Take Username from user 
-// let na = prompt("Enter a Username")
-// while (na == null || na == ""){
-//     na = prompt("Please!\nEnter a Valid Username")
-// }
-// nam()
-// function nam() {
-//     let x = na.charAt(0).toUpperCase()
-//     let y = na.slice(1)
-//     aam = x + y
-//     username.innerHTML = aam
-// }
+
+setTimeout(() => {
+    screen()
+}, 8000);
+function screen() {
+    main_screen.style.display = "flex"
+    loading_screen.style.display = "none"
+    // // Take Username from user 
+    // let na = prompt("Enter a Username")
+    // while (na == null || na == "") {
+    //     na = prompt("Please!\nEnter a Valid Username")
+    // }
+    // nam()
+    // function nam() {
+    //     let x = na.charAt(0).toUpperCase()
+    //     let y = na.slice(1)
+    //     aam = x + y
+    //     username.innerHTML = aam
+    // }
+}
 
 let c = 2000
 let e = 1000
@@ -52,8 +64,11 @@ function level(event) {
             f = "+2"
             click.src = "assets/levels/2.jpg"
             num_click(f, event);
-            if (previousLevel !== "2") e = 1500;
-            energy.innerHTML = e;
+            if (previousLevel !== "2") {
+                e = 1500;
+                energy2.innerHTML = "/1500"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 2) {
@@ -70,8 +85,11 @@ function level(event) {
             f = "+3"
             click.src = "assets/levels/3.jpg"
             num_click(f, event);
-            if (previousLevel !== "3") e = 2000;
-            energy.innerHTML = e;
+            if (previousLevel !== "3") {
+                e = 2000;
+                energy2.innerHTML = "/2000"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 3) {
@@ -88,8 +106,11 @@ function level(event) {
             f = "+4"
             click.src = "assets/levels/4.jpg"
             num_click(f, event);
-            if (previousLevel !== "4") e = 2500;
-            energy.innerHTML = e;
+            if (previousLevel !== "4") {
+                e = 2500;
+                energy2.innerHTML = "/2500"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 4) {
@@ -106,8 +127,11 @@ function level(event) {
             f = "+5"
             click.src = "assets/levels/5.jpg"
             num_click(f, event);
-            if (previousLevel !== "5") e = 3000;
-            energy.innerHTML = e;
+            if (previousLevel !== "5") {
+                e = 3000;
+                energy2.innerHTML = "/3000"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 5) {
@@ -124,8 +148,11 @@ function level(event) {
             f = "+6"
             click.src = "assets/levels/6.jpg"
             num_click(f, event);
-            if (previousLevel !== "6") e = 3500;
-            energy.innerHTML = e;
+            if (previousLevel !== "6") {
+                e = 3500;
+                energy2.innerHTML = "/3500"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 6) {
@@ -142,8 +169,11 @@ function level(event) {
             f = "+7"
             click.src = "assets/levels/7.jpg"
             num_click(f, event);
-            if (previousLevel !== "7") e = 4000;
-            energy.innerHTML = e;
+            if (previousLevel !== "7") {
+                e = 4000;
+                energy2.innerHTML = "/4000"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 7) {
@@ -160,8 +190,11 @@ function level(event) {
             f = "+8"
             click.src = "assets/levels/8.jpg"
             num_click(f, event);
-            if (previousLevel !== "8") e = 4500;
-            energy.innerHTML = e;
+            if (previousLevel !== "8") {
+                e = 4500;
+                energy2.innerHTML = "/4500"
+                energy.innerHTML = e;
+            }
         }
         // setInterval(() => {
         //     if (e < 18) {
@@ -178,8 +211,12 @@ function level(event) {
             f = "+9"
             click.src = "assets/levels/9.jpg"
             num_click(f, event);
-            if (previousLevel !== "9") e = 5000;
-            energy.innerHTML = e;
+            if (previousLevel !== "9") {
+                e = 5000;
+                energy2.innerHTML = "/5000"
+                energy.innerHTML = e;
+                bolt.src = "assets/energy2.png"
+            }
         }
         // setInterval(() => {
         //     if (e < 9) {
@@ -196,8 +233,12 @@ function level(event) {
             f = "+10"
             click.src = "assets/levels/10.jpg"
             num_click(f, event);
-            if (previousLevel !== "10") e = 5500;
-            energy.innerHTML = e;
+            if (previousLevel !== "10") {
+                e = 5500;
+                energy2.innerHTML = "/5500"
+                energy.innerHTML = e;
+                bolt.src = "assets/energy2.png"
+            }
         }
         // setInterval(() => {
         //     if (e < 10) {
