@@ -11,13 +11,13 @@ let bolt = document.getElementById("energy_pic")
 let loading_screen = document.getElementById("loading_screen")
 let main_screen = document.getElementById("main_screen")
 
-
 setTimeout(() => {
     screen()
 }, 8000);
 function screen() {
     main_screen.style.display = "flex"
     loading_screen.style.display = "none"
+
     // Take Username from user 
     let na = prompt("Enter a Username")
     while (na == null || na == "") {
