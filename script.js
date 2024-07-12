@@ -18,18 +18,18 @@ setTimeout(() => {
 function screen() {
     main_screen.style.display = "flex"
     loading_screen.style.display = "none"
-    // // Take Username from user 
-    // let na = prompt("Enter a Username")
-    // while (na == null || na == "") {
-    //     na = prompt("Please!\nEnter a Valid Username")
-    // }
-    // nam()
-    // function nam() {
-    //     let x = na.charAt(0).toUpperCase()
-    //     let y = na.slice(1)
-    //     aam = x + y
-    //     username.innerHTML = aam
-    // }
+    // Take Username from user 
+    let na = prompt("Enter a Username")
+    while (na == null || na == "") {
+        na = prompt("Please!\nEnter a Valid Username")
+    }
+    nam()
+    function nam() {
+        let x = na.charAt(0).toUpperCase()
+        let y = na.slice(1)
+        aam = x + y
+        username.innerHTML = aam
+    }
 }
 
 let c = 2000
