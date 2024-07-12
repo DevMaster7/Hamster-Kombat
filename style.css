@@ -1,7 +1,6 @@
 :root {
     --maincolor: rgb(54, 54, 54);
     --seccolor: #201F21;
-
 }
 
 * {
@@ -32,11 +31,11 @@ body {
 
 .load_img {
     height: 100%;
-    width: 29%;
+    width: 27%;
 }
 
 .loading_bar_con {
-    width: 29%;
+    width: 27%;
     display: flex;
     justify-content: start;
     position: fixed;
@@ -157,7 +156,7 @@ body {
     width: 4vw;
     height: 4vw;
     border-radius: 50%;
-    border: .6vw solid #ffc76d;
+    border: .4vw solid #ffc76d;
     animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
 }
 
@@ -212,25 +211,30 @@ body {
 .icon_con {
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 9vw;
+    width: 15vw;
     bottom: 4vh;
 }
 
 .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    width: 3.3vw;
-    height: 7vh;
+    width: 3.6vw;
+    height: 3.6vw;
+    background-color: #201F21;
+    border-radius: 50%;
     pointer-events: all;
 }
 
-.telegram {
-    width: 3vw;
-    height: 6vh;
+.social_icon {
+    width: 1.9vw;
+    height: 1.9vw;
 }
 
-.telegram::selection{
+.social_icon::selection {
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -657,6 +661,33 @@ body {
         height: 120vh;
     }
 
+    .load_img {
+        width: 100%;
+    }
+
+    .loading_bar_con {
+        width: 100%;
+    }
+
+    .spinner {
+        width: 16vw;
+        height: 16vw;
+        border: 1.9vw solid #ffc76d;
+    }
+
+    .loading {
+        font-size: 7.5vw;
+    }
+
+    .icon_con {
+        width: 27%;
+    }
+
+    .icons {
+        width: 11vw;
+        height: 11vw;
+    }
+
     .heading_container {
         width: 98%;
     }
@@ -737,14 +768,21 @@ body {
 
     .head_container {
         width: 100%;
+        justify-content: space-around;
         position: relative;
-        bottom: 6vh;
+        bottom: 5.5vh;
     }
 
     .daily_imgs {
         width: 30vw;
-        height: 17vh;
+        height: 15vh;
         position: absolute;
+    }
+
+    .dot {
+        margin: 0vw 0vw 25vw 23vw;
+        width: 1.7vw;
+        height: 1.7vw;
     }
 
     .times {
@@ -786,7 +824,8 @@ body {
     }
 
     .energy {
-        font-size: 7.5vw;
+        width: 10vw;
+        height: 8vw;
     }
 
     .energy_txt {

@@ -30,6 +30,7 @@ function screen() {
         aam = x + y
         username.innerHTML = aam
     }
+    localStorage.setItem("name",na)
 }
 
 let c = 2000
@@ -357,8 +358,8 @@ function num_click(m, event) {
     const floatingText = document.createElement('span');
     floatingText.textContent = m;
     floatingText.classList.add('floating-text');
-    floatingText.style.left = `${offsetX - 27}px`;
-    floatingText.style.top = `${offsetY - 45}px`;
+    floatingText.style.left = `${offsetX - 80}px`;
+    floatingText.style.top = `${offsetY - 130}px`;
     btn.appendChild(floatingText);
     setTimeout(() => {
         floatingText.remove();
